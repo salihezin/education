@@ -12,6 +12,8 @@ app.post("/hello", (req, res) => {
     res.json({ welcome: `Merhaba ${name}` });
 });
 
-app.listen(3000, () => {
-    console.log("Local sunucu port 3000'de.");
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log("Sunucu port:", PORT);
 });
